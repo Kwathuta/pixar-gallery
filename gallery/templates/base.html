@@ -9,7 +9,7 @@
     {%else%}
     <title>Pixar</title>
     {% endif %} {% block styles %} {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/basenews.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     {% endblock %}
   </head>
   <body>
@@ -17,6 +17,12 @@
     <!-- block scripts -->
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
     {% bootstrap_javascript %} {% endblock %}
   </body>
 </html>
