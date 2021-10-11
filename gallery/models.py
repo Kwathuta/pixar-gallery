@@ -36,6 +36,7 @@ class Image(models.Model):
     location = models.ForeignKey(
         Location, on_delete=models.CASCADE, default=None)
     category = models.ManyToManyField(Category)
+    post_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
