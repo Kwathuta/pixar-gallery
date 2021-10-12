@@ -41,7 +41,9 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {%for category in categories%}
                 <li>
-                  <a class="dropdown-item" href="category/{{category}}"
+                  <a
+                    class="dropdown-item"
+                    href="{%url 'view_category' category%}"
                     >{{category}}</a
                   >
                 </li>
