@@ -103,7 +103,10 @@
               value="http://127.0.0.1:8000{{image.image.url}}"
               id="{{image.id}}"
             />
-            <button class="btn btn-outline-primary" onclick="copyUrl()">
+            <button
+              class="btn btn-outline-primary"
+              onclick="copyUrl('{{image.id}}')"
+            >
               Copy
             </button>
           </div>
@@ -124,10 +127,13 @@
       </div>
     </div>
 
+    {% empty %}
+    <h2 class="text-center">There are no images to display at the moment</h2>
+    {% endfor %}
     <script>
-      function copyUrl() {
+      function copyUrl(id) {
         /* Get the text field */
-        var copyText = document.getElementById("{{image.id}}");
+        var copyText = document.getElementById(id);
         console.log(copyText.value);
 
         /* Select the text field */
@@ -138,13 +144,9 @@
         navigator.clipboard.writeText(copyText.value);
 
         /* Alert the copied text */
-        alert("Copied the text: " + copyText.value);
+        alert("Copied!");
       }
     </script>
-
-    {% empty %}
-    <h2 class="text-center">There are no images to display at the moment</h2>
-    {% endfor %}
   </div>
 </div>
 
