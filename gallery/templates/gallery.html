@@ -98,11 +98,7 @@
           <div class="modal-body">
             <img src="{{image.image.url}}" class="img-fluid" alt="" />
             <h5 style="margin-top: 10px">Copy Url for {{image.name}}</h5>
-            <input
-              type="text"
-              value="https://pixar-gallery.herokuapp.com{{image.image.url}}"
-              id="{{image.id}}"
-            />
+            <input type="text" value="{{image.image.url}}" id="{{image.id}}" />
             <button
               class="btn btn-outline-primary"
               onclick="copyUrl('{{image.id}}')"
