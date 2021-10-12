@@ -7,11 +7,12 @@ from django.http import Http404, HttpResponse
 
 
 def gallery(request):
+    categories = Image.objects.distinct().values_list('category__name', flat=True)
     try:
         images = Image.objects.all()
     except ObjectDoesNotExist:
         raise Http404()
-    return render(request, 'gallery.html', {'image': images})
+    return render(request, 'gallery.html', {'image': images, 'categories': categories})
 
 
 def search_images(request):

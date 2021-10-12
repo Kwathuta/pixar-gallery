@@ -33,3 +33,7 @@ img {
 .modal-dialog {
   margin: 0;
 }
+
+.modal {
+  left: 0;
+}
