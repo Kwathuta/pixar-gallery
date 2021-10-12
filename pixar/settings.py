@@ -24,12 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-CLOUDINARY_STORAGE = {
-    'cloud_name': 'dev-kev',
-    'API_KEY': '846834848389437',
-    'API_SECRET': '-t369FcJjUWjrc6pZdEnRx7r2nE'
-}
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
