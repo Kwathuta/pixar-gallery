@@ -38,6 +38,9 @@ class Image(models.Model):
     category = models.ManyToManyField(Category)
     post_time = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-post_time']
+
     def __str__(self):
         return self.name
 
