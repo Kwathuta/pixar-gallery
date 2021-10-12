@@ -10,6 +10,7 @@ psycopg2 = "*"
 pillow = "*"
 gunicorn = "*"
 django-heroku = "*"
+django-cloudinary-storage = "*"
 
 [dev-packages]
 black = "*"
